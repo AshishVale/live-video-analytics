@@ -107,20 +107,20 @@
             "properties": {
                 "addressSpace": {
                     "addressPrefixes": [
-                        "10.0.0.0/26"
+                        "10.45.194.128/26"
                     ]
                 },
                 "subnets": [
                     {
                         "name": "default",
                         "properties": {
-                            "addressPrefix": "10.0.0.0/27"
+                            "addressPrefix": "10.45.194.128/27"
                         }
                     },
                     {
                         "name": "AzureBastionSubnet",
                         "properties": {
-                            "addressPrefix": "10.0.0.32/27"
+                            "addressPrefix": "10.45.194.160/27"
                         }
                     }
                 ]
