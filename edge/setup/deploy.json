@@ -6,10 +6,10 @@
             "metadata": {
                 "description": "Used to qualify the names of all of the resources created in this template."
             },
-            "defaultValue": "lvasample",
+            "defaultValue": "video-analytics-001",
             "type": "string",
             "minLength": 3,
-            "maxLength": 13
+            "maxLength": 100
         },
         "location": {
             "metadata": {
@@ -31,8 +31,8 @@
         "hubName": "[concat(parameters('namePrefix'),'hub',uniqueString(resourceGroup().id))]",
         "registryName": "[concat(parameters('namePrefix'),'registry',uniqueString(resourceGroup().id))]",
         "hubApiVersion": "2019-11-04",
-        "bastionName": "[concat(parameters('namePrefix'),'-bastion')]",
-        "vnetName": "[concat(parameters('namePrefix'),'-vnet')]",
+        "bastionName": "[concat('snet-',parameters('namePrefix'),'-bastion')]",
+        "vnetName": "[concat('vnet-spoke-general-proj-canada-central-',parameters('namePrefix'))]",
         "pipName": "[concat(parameters('namePrefix'),'-bastion-pip')]"
     },
     "resources": [
@@ -112,7 +112,7 @@
                 },
                 "subnets": [
                     {
-                        "name": "default",
+                        "name": "snet-video-analytics-001-private-link",
                         "properties": {
                             "addressPrefix": "10.45.194.128/27"
                         }
