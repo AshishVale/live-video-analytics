@@ -15,7 +15,7 @@
             "metadata": {
                 "description": "Used to qualify the names of all of the storage account created."
             },
-            "defaultValue": "vidanalytics",
+            "defaultValue": "va",
             "type": "string",
             "minLength": 3,
             "maxLength": 100
