@@ -6,16 +6,7 @@
             "metadata": {
                 "description": "Used to qualify the names of all of the resources created in this template."
             },
-            "defaultValue": "video-analytics-001",
-            "type": "string",
-            "minLength": 3,
-            "maxLength": 100
-        },
-        "namePrefixStorage": {
-            "metadata": {
-                "description": "Used to qualify the names of all of the storage account created."
-            },
-            "defaultValue": "va",
+            "defaultValue": "lvasample",
             "type": "string",
             "minLength": 3,
             "maxLength": 100
@@ -35,14 +26,14 @@
         }
     },
     "variables": {
-        "storageAccountName": "[concat(parameters('namePrefixStorage'),uniqueString(resourceGroup().id))]",
+        "storageAccountName": "[concat(parameters('namePrefix'),uniqueString(resourceGroup().id))]",
         "amsAccountName": "[concat(parameters('namePrefix'),uniqueString(resourceGroup().id))]",
         "hubName": "[concat(parameters('namePrefix'),'hub',uniqueString(resourceGroup().id))]",
         "registryName": "[concat(parameters('namePrefix'),'registry',uniqueString(resourceGroup().id))]",
         "hubApiVersion": "2019-11-04",
-        "bastionName": "[concat('snet-',parameters('namePrefix'),'-bastion')]",
-        "vnetName": "[concat('vnet-spoke-general-proj-canada-central-',parameters('namePrefix'))]",
-        "pipName": "[concat(parameters('namePrefix'),'-bastion-pip')]"
+        "bastionName": "['snet-video-analytics-001-bastion']",
+        "vnetName": "['vnet-spoke-general-proj-canada-central-video-analytics-001']",
+        "pipName": "['snet-video-analytics-001-bastion-pip']"
     },
     "resources": [
         {
