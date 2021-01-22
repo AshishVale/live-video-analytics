@@ -263,7 +263,7 @@ Finally, we'll deploy a VM that will act as your IoT Edge device for using the L
     --admin-username $IOT_EDGE_VM_ADMIN \
     --admin-password $IOT_EDGE_VM_PWD \
     --vnet-name $VNET \
-    --subnet 'default' \
+    --subnet 'snet-video-analytics-001-private-link' \
     --custom-data $CLOUD_INIT_FILE \
     --public-ip-address "" \
     --size "Standard_DS3_v2" \
